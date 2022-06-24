@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 240px;
+}
+
+h1 {
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 24px);
+    gap: 10px;
+}
+
+form > input:invalid {
+    border: #900;
+    background-color: #FDD;
+}
+
+/* from MDN */
+
+input[type=email] {
+    border: 1px solid #333;
+}
+
+.error {
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+}
+
+.error.active {
+    padding: 0.3em;
+}
